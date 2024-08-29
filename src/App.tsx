@@ -9,6 +9,7 @@ import { ThemeProvider } from '@emotion/react';
 import { ConcurrentRenderingExample } from './v-18-features/concurrent-rendering';
 import { AutomaticBatchingExample } from './v-18-features/automatic-batching';
 import { SuspenseDataLoadingExample } from './v-18-features/suspense-data-loading';
+import { FlexboxLayout } from './responsive-design/flexbox/flexbox';
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
@@ -61,6 +62,10 @@ function App() {
         <Divider />
         <Box sx={{ mb: '2rem', mt: '1rem' }}>
           <EnhancedUsersList />
+        </Box>
+        <Divider />
+        <Box sx={{ mb: '2rem', mt: '1rem' }}>
+          <FlexboxLayout />
         </Box>
       </Box>
     </ThemeProvider>

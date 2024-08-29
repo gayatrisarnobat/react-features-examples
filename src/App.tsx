@@ -8,6 +8,7 @@ import { darkTheme, lightTheme } from './theme';
 import { ThemeProvider } from '@emotion/react';
 import { ConcurrentRenderingExample } from './v-18-features/concurrent-rendering';
 import { AutomaticBatchingExample } from './v-18-features/automatic-batching';
+import { SuspenseDataLoadingExample } from './v-18-features/suspense-data-loading';
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
@@ -44,6 +45,10 @@ function App() {
         <Divider />
         <Box sx={{ mb: '2rem', mt: '1rem' }}>
           <AutomaticBatchingExample />
+        </Box>
+        <Divider />
+        <Box sx={{ mb: '2rem', mt: '1rem' }}>
+          <SuspenseDataLoadingExample />
         </Box>
         <Divider />
         <Box sx={{ mb: '2rem', mt: '1rem' }}>

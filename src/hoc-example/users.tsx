@@ -13,15 +13,18 @@ import {
 } from '@mui/material';
 
 // @ts-expect-error: ok to ignore
-const UserList = ({ usersData }) => {
+const UserList = ({ usersData, showDefaultMsg = true }) => {
   return (
     <>
-      <Box sx={{ mb: 2 }}>
-        <h6>
-          The following example of users data fetching shows the usage of higher
-          order components
-        </h6>
-      </Box>
+      {showDefaultMsg && (
+        <Box sx={{ mb: 2 }}>
+          <h6>
+            The following example of users data fetching shows the usage of
+            higher order components
+          </h6>
+        </Box>
+      )}
+
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
           <TableHead>

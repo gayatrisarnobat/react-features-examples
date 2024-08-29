@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Counter } from './custom-hooks-examples/state-management/counter';
+import { Box } from '@mui/material';
+import { Connectivity } from './custom-hooks-examples/effectOnlineOffline/connectivity';
+import { EnhancedUsersList } from './hoc-example/users';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+      }}
+    >
+      <Box sx={{ mb: '2rem' }}>
+        <Counter />
+      </Box>
+      <Box sx={{ mb: '2rem' }}>
+        <Connectivity />
+      </Box>
+      <Box sx={{ mb: '2rem' }}>
+        <EnhancedUsersList />
+      </Box>
+    </Box>
   );
 }
 

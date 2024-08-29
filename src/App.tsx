@@ -7,6 +7,7 @@ import { EnhancedUsersList } from './hoc-example/users';
 import { darkTheme, lightTheme } from './theme';
 import { ThemeProvider } from '@emotion/react';
 import { ConcurrentRenderingExample } from './v-18-features/concurrent-rendering';
+import { AutomaticBatchingExample } from './v-18-features/automatic-batching';
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
@@ -39,6 +40,10 @@ function App() {
       >
         <Box sx={{ mb: '2rem' }}>
           <ConcurrentRenderingExample />
+        </Box>
+        <Divider />
+        <Box sx={{ mb: '2rem', mt: '1rem' }}>
+          <AutomaticBatchingExample />
         </Box>
         <Divider />
         <Box sx={{ mb: '2rem', mt: '1rem' }}>

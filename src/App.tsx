@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
 import { Counter } from './custom-hooks-examples/state-management/counter';
-import { Box, CssBaseline } from '@mui/material';
+import { Box, CssBaseline, Divider } from '@mui/material';
 import { Connectivity } from './custom-hooks-examples/effectOnlineOffline/connectivity';
 import { EnhancedUsersList } from './hoc-example/users';
 import { darkTheme, lightTheme } from './theme';
 import { ThemeProvider } from '@emotion/react';
+import { ConcurrentRenderingExample } from './v-18-features/concurrent-rendering';
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
@@ -37,12 +38,18 @@ function App() {
         }}
       >
         <Box sx={{ mb: '2rem' }}>
+          <ConcurrentRenderingExample />
+        </Box>
+        <Divider />
+        <Box sx={{ mb: '2rem', mt: '1rem' }}>
           <Counter />
         </Box>
-        <Box sx={{ mb: '2rem' }}>
+        <Divider />
+        <Box sx={{ mb: '2rem', mt: '1rem' }}>
           <Connectivity />
         </Box>
-        <Box sx={{ mb: '2rem' }}>
+        <Divider />
+        <Box sx={{ mb: '2rem', mt: '1rem' }}>
           <EnhancedUsersList />
         </Box>
       </Box>
